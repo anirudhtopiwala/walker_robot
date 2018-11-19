@@ -17,7 +17,7 @@
         pkg="rosbag"
         name="record"
         type="record"
-        args="-a -O $(find walker_robot)/results/sim.bag -x /camera/(.*)"
+        args="-a -O $(find walker_robot)/results/walker.bag -x /camera/(.*)"
         if="$(eval record == 'enable')"
     />
 </launch>
