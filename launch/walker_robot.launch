@@ -1,0 +1,23 @@
+<launch>
+    <arg 
+      name="record" 
+      default="disable"
+    />
+    <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+        <arg name="world_file" value="$(find walker_robot)/world/walledworld"/>
+    </include>
+
+    <node
+        pkg="walker_robot"
+        name="walker"
+        type="walker"
+    />
+
+    <node
+        pkg="rosbag"
+        name="record"
+        type="record"
+        args="-a -O $(find walker_robot)/results/sim.bag -x /camera/(.*)"
+        if="$(eval record == 'enable')"
+    />
+</launch>
