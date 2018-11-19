@@ -87,7 +87,7 @@ int main(int argc, char **argv) {
     msg.angular.z = 0.5;
   } else {
     // moving forward
-    msg.linear.x = 2;
+    msg.linear.x = 1;
   }
 
   velocity.publish(msg);
