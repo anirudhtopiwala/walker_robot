@@ -75,7 +75,7 @@ class walker {
    *   @param  message type sensor_msgs::LaserScan
    *   @return none
    */
-  void laserscanCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
+  void laserScanCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
 
    /**
    *   @brief  returns the value of obstacle
@@ -90,4 +90,4 @@ class walker {
     bool range;
 };
 
-#endif // INCLUDE_WALKER_HPP_
+#endif  // INCLUDE_WALKER_HPP_
