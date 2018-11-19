@@ -52,7 +52,10 @@
 /**
  * Initializing Constructor for an object of walker class
  */
-walker::walker() {}
+walker::walker() {
+    // Initialing the range variable due to cppcheck warning
+    range = false;
+}
 
 /**
  * Initializing Destructor for the object of walker class
@@ -67,7 +70,7 @@ void walker::laserscanCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
     for (auto i = 0; i < msg->ranges.size(); ++i) {
         if (msg->ranges[i] < 2) {
             range = true;
-            ROS_DEBUG_STREAM("Range " << msg->ranges[i] << " less than 2m");
+            ROS_D_STREAM("Range " << msg->ranges[i] << " less than 2m");
             return;
         }
     }
@@ -80,5 +83,5 @@ void walker::laserscanCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
  * Returns the value of variable range
  */
 bool walker::inRange() {
-  return range;
+    return range;
 }

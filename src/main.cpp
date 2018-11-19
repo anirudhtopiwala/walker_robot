@@ -85,9 +85,11 @@ int main(int argc, char **argv) {
   if (Walk.inRange() == true) {
     // rotate until obstacle out is out of range
     msg.angular.z = 0.5;
+    ROS_INFO_STREAM("Rotating to avoid Obstacle");
   } else {
     // moving forward
     msg.linear.x = 1;
+    ROS_INFO_STREAM("Moving Forward and Exploring");
   }
 
   velocity.publish(msg);
