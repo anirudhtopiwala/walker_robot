@@ -62,11 +62,11 @@ int main(int argc, char **argv) {
   ros::NodeHandle n;
 
   // Subscribing to the topic laser scan data
-  ros::Subscriber sensor = n.subscribe<sensor_msgs::
-          LaserScan>("/scan", 50, &walker::laserscanCallback, &Walk);
+  auto sensor = n.subscribe<sensor_msgs::
+          LaserScan>("/scan", 50, &walker::laserScanCallback, &Walk);
 
   // Creating a publisher object which publishes to the given topic
-  ros::Publisher velocity = n.advertise<geometry_msgs::Twist>
+  auto velocity = n.advertise<geometry_msgs::Twist>
                              ("/mobile_base/commands/velocity", 1000);
 
   ros::Rate loop_rate(5);

@@ -66,11 +66,11 @@ walker::~walker() {}
  *Laserscan callback function to subscribe the topic
  */
 
-void walker::laserscanCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
+void walker::laserScanCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
     for (auto i = 0; i < msg->ranges.size(); ++i) {
         if (msg->ranges[i] < 2) {
             range = true;
-            ROS_D_STREAM("Range " << msg->ranges[i] << " less than 2m");
+            ROS_DEBUG_STREAM("Range " << msg->ranges[i] << " less than 2m");
             return;
         }
     }
