@@ -70,11 +70,8 @@ int main(int argc, char **argv) {
                              ("/mobile_base/commands/velocity", 1000);
 
   ros::Rate loop_rate(5);
-  
   geometry_msgs::Twist msg;
-
   while (ros::ok()) {
-
   // Initiaizing msg with 0
   msg.linear.x = 0.0;
   msg.linear.y = 0.0;
@@ -82,7 +79,6 @@ int main(int argc, char **argv) {
   msg.angular.x = 0.0;
   msg.angular.y = 0.0;
   msg.angular.z = 0.0;
-
   if (Walk.inRange() == true) {
     // rotate until obstacle out is out of range
     msg.angular.z = 0.5;
