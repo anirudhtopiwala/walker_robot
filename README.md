@@ -3,7 +3,7 @@
 ---
 
 ## Overview
-This program simulates a turtlebot object avoidance behaviour. Iy does so by simply moving forward until it senses an obstacle within a particular range. When that happens it rotates around its center until the path is clear and then again starts moving forward. The program also has the capability to enable and disable rosbag recording, which when enabled can record all the topics except /camera. The rosbag file is generated in the results directory. This rosbag file can then be played to see all the topic which had been published.
+This program simulates a turtlebot object avoidance behaviour. It does so by simply moving forward until it senses an obstacle within a particular range. When that happens it rotates around its center until the path is clear and then again starts moving forward. The program also has the capability to enable and disable rosbag recording, which when enabled can record all the topics except '/camera'. The rosbag file is generated in the results directory. This rosbag file can then be played to see all the topic messages which had been published.
 
 ## Dependencies
 This program works on a device running Ubuntu 16.04 and ROS Kinetic Kame. It will also need Gazebo 7.x (part of ros-kinetic-desktop-full package) and Turtlebot simulation stack
@@ -86,7 +86,7 @@ The change in velicoty in z angular indicates the turtlebot rotating.
 
 ## Output
 
-Below is an implemnetatin of the package.
+Below is a gif demonstrating object avoidance. Note that the speed is 4x.
 <p align="center">
 <img src="https://github.com/anirudhtopiwala/walker_robot/blob/master/results/output.gif">
 </p>
