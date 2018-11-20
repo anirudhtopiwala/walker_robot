@@ -75,7 +75,7 @@ class walker {
    *   @param  message type sensor_msgs::LaserScan
    *   @return none
    */
-  void laserScanCallback(const sensor_msgs::LaserScan::ConstPtr& msg);
+  void laserScanCallback(const sensor_msgs::LaserScan::ConstPtr&);
 
    /**
    *   @brief  returns the value of obstacle
