@@ -70,9 +70,10 @@ int main(int argc, char **argv) {
                              ("/mobile_base/commands/velocity", 1000);
 
   ros::Rate loop_rate(5);
+  
+  geometry_msgs::Twist msg;
 
   while (ros::ok()) {
-  geometry_msgs::Twist msg;
 
   // Initiaizing msg with 0
   msg.linear.x = 0.0;
