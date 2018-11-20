@@ -56,12 +56,6 @@ walker::walker() {
     // Initialing the range variable due to cppcheck warning
     range = false;
 }
-
-/**
- * Initializing Destructor for the object of walker class
- */
-walker::~walker() {}
-
 /**
  *Laserscan callback function to subscribe the topic
  */
@@ -85,3 +79,7 @@ void walker::laserScanCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
 bool walker::inRange() {
     return range;
 }
+/**
+ * Calling Destructor for the object of walker class
+ */
+walker::~walker() {}
