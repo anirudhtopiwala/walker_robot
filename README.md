@@ -86,3 +86,9 @@ rostopic echo /mobile_base/commands/velocity
 ```
 The change in velicoty in z angular indicates the turtlebot rotating.
 
+## Output
+
+Below is an implemnetatin of the package.
+<p align="center">
+<img src="https://github.com/anirudhtopiwala/walker_robot/blob/master/results/output.gif">
+</p>
